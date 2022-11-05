@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import logo from './logo192.png'
+import logo from './images/logo192.png'
 
 export default function App() {
 
