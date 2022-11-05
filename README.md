@@ -18,3 +18,4 @@
  # CURRENT ISSUES
  - Problem 1: Starting up React by itself makes it impossible to fetch data from the Flask backend unless they're both activated at the same time.
  - Fix 1: Change the "react-start" script in package.json to run flask simultaneously with React
+ - Problem 2: Currently have volatile files (.env __pycache__) that I do not want to be pushed. Learn how to add these to gitignore.
