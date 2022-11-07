@@ -1,28 +1,14 @@
 import React from 'react'
 
-export default function UserInfo({userProfile}) {
-
-    //Conditional Load that makes sure objects are loaded in before rendering to page
-    function displayData(){
-        if (userProfile != null){
-            return(
-              <div>
-                <p>My name is {userProfile.name}</p>
-                <p>My projected retirement account balance is ${userProfile.retirement_account_balance}</p>
-                <p>I spend about ${userProfile.yearly_expenses} per year</p>
-                <p>I need this money to last me {userProfile.years} years</p>
-                <p>I invest about {userProfile.stock_percentage}% of my money into stocks</p>
-              </div>
-            )
-          }
-          else{
-            return <p>Loading...</p>
-          }
-    }
+export default function UserInfo({formData}) {
 
   return (
     <div>
-        {displayData()}
+        <p>My name is {formData.name}</p>
+        <p>I'm planning to save ${formData.retirement_account_balance} for retirement</p>
+        <p>I spend around ${formData.yearly_expenses} every year</p>
+        <p>I need my retirement money to last for {formData.years} years</p>
+        <p>I'm going to invest {formData.stock_percentage}% of my retirement money into a stock fund</p>
     </div>
   )
 }

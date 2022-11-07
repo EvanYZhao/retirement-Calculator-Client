@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, {useState} from 'react'
+import UserInfo from './userInfo'
 import './formStyle.css'
 
 const initialFormData = {
@@ -17,7 +18,6 @@ export default function UserForm() {
   //(e.target.name shows name of form element being accessed. [] stringifies the form name)
   //(e.target.value shows the current value being manipulated in any one of the text boxes)
   const changeHandler = (e) => {
-    console.log([e.target.name])
     updateFormData(
       {
         ...formData,
@@ -50,7 +50,7 @@ export default function UserForm() {
             autoComplete="off"
             onChange={changeHandler}
             />
-            <label>What is your projected retirement account balance?<br/>(Enter a number)</label>
+            <label>What is your projected retirement account balance?<br/>(Enter a positive number)</label>
             <input
             className="input"
             type="text"
@@ -58,7 +58,7 @@ export default function UserForm() {
             //required
             autoComplete="off"
             onChange={changeHandler}/>
-            <label>What do you estimate your yearly expenses to be? <br/>(Enter a number)</label>
+            <label>What do you estimate your yearly expenses to be? <br/>(Enter a positive number)</label>
             <input
             className="input"
             type="text"
@@ -87,6 +87,7 @@ export default function UserForm() {
             />
             <button type="submit" className="submit-button">Submit</button>
         </form>
+        <UserInfo formData={formData}/>
     </div>
   )
 }
