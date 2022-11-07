@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default function UserInfo({userProfile}) {
-    
+
     //Conditional Load that makes sure objects are loaded in before rendering to page
     function displayData(){
-        if (userProfile.length > 0){
+        if (userProfile != null){
             return(
               <div>
                 <p>My name is {userProfile[0].name}</p>

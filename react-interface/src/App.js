@@ -6,7 +6,7 @@ import UserInfo from './components/userInfo'
 export default function App() {
 
   //profileData created as an array so conditional load checking is possible (profileData.length > 0?)
-  const [profileData, setProfileData] = useState([])
+  const [profileData, setProfileData] = useState(null)
   // const [name, setName] = useState('')
   // const [retirementBalance, setRetirementBalance] = useState(0)
   // const [yearlyExpenses, setYearlyExpenses] = useState(0)
