@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import UserForm from './components/userForm'
+import UserInfo from './components/userInfo'
 
 export default function App() {
 
@@ -26,7 +27,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <UserForm object={profileData}/>
+      <UserForm/>
+      <UserInfo userProfile={profileData}/>
     </div>
   );
 }
