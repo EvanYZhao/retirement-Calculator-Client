@@ -19,12 +19,16 @@
  - Learn how to send data that was posted in the backend back to the front end
 
  # CURRENT ISSUES
- - Problem 1: Starting up React by itself makes it impossible to fetch data from the Flask backend unless they're both activated at the same time.
+ - Problem 1: Starting up React by itself makes it impossible to fetch data from the Flask backend unless they're both activated at the same time
  - Fix 1: Change the "react-start" script in package.json to run flask simultaneously with React
- - Problem 2: Currently have volatile files (.env __pycache) that I do not want to be pushed. Learn how to add these to gitignore.
- - Fix 2: Figure out .gitignore syntax
+ - Problem 2: Currently have volatile files (.env __pycache) that I do not want to be pushed. Learn how to add these to gitignore
+ - Fix 2: Figure out .gitignore syntax and conventions
+ - Problem 3: Data successfully sent to Flask backend but no idea how to process and send back to frontend
+ - Fix 3: Research
+ - Problem 4: User can input anything into the forms and give trash values to be sent to the backend
+ - Fix 4: Figure out how to filter input and reprompt users to input data when types don't match
 
- # ACQUIRED SKILLS/LEANING OUTCOMES FROM PROJECT
+ # ACQUIRED SKILLS/LEARNING OUTCOMES FROM PROJECT
  - Basics of Github
  - Linux commands in general/navigation using the terminal
  - What pip actually is and why it's so important

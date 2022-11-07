@@ -7,11 +7,11 @@ export default function UserInfo({userProfile}) {
         if (userProfile != null){
             return(
               <div>
-                <p>My name is {userProfile[0].name}</p>
-                <p>My projected retirement account balance is ${userProfile[0].retirementBalance}</p>
-                <p>I spend about ${userProfile[0].yearly_expenses} per year</p>
-                <p>I need this money to last me {userProfile[0].years} years</p>
-                <p>I invest about {userProfile[0].stockPercentage}% of my money into stocks</p>
+                <p>My name is {userProfile.name}</p>
+                <p>My projected retirement account balance is ${userProfile.retirement_account_balance}</p>
+                <p>I spend about ${userProfile.yearly_expenses} per year</p>
+                <p>I need this money to last me {userProfile.years} years</p>
+                <p>I invest about {userProfile.stock_percentage}% of my money into stocks</p>
               </div>
             )
           }
