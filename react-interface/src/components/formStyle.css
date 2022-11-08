@@ -1,0 +1,26 @@
+h2 {
+    text-align: center;
+}
+
+label{
+    padding: 1vw;
+    text-align: center;
+}
+
+.form-Object{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.input{
+    width: 35vw;
+    text-align: center;
+}
+
+.submit-button{
+    margin-top: 1vw;
+
+}
