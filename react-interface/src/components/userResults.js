@@ -5,8 +5,8 @@ export default function UserResults() {
     const [retirementResults, updateRetirementResults] = useState(null)
     const [loaded, updateLoaded] = useState(false)
 
-    useEffect(async () => {
-        await axios.get('/results')
+    useEffect(() => {
+        axios.get('/results')
         .then((res) => {
             updateRetirementResults(res.data)
             updateLoaded(true)
