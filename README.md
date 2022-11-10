@@ -26,9 +26,6 @@
  - Problem 3: Data successfully sent to Flask backend but no idea how to process and send back to frontend
  - Fix 3: Research
  - Problem 4: User can input anything into the forms and give trash values to be sent to the backend
- - Fix 4: Figure out how to filter input and reprompt users to input data when types don't match
- - Problem 5: Race condition between POST and GET as I want the POST to happen first before the user attempts a GET request
- - Fix 5: Learn more about asynchronous vs synchronous functions and how they can foster GET/POST dependencies
 
  # ACQUIRED SKILLS/LEARNING OUTCOMES FROM PROJECT
  - Basics of Github
