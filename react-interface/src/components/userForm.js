@@ -1,10 +1,8 @@
 import axios from 'axios'
 import React, {useState} from 'react'
-import UserInfo from './userInfo'
 import './formStyle.css'
 
 const initialFormData = {
-  name: "",
   retirement_account_balance: 0,
   yearly_expenses: 0,
   years: 0,
@@ -27,7 +25,7 @@ export default function UserForm() {
   }
 
   //POSTs the final variables to the API after hitting submit button
-  function submitHandler(){
+  const submitHandler = () => {
     axios.post("/retrieve", formData)
     .then((response) => {
       console.log(response)
@@ -41,53 +39,48 @@ export default function UserForm() {
     <div className="form-container">
         <h2>Projected Retirement Account Statistics</h2>
         <form onSubmit={submitHandler} className="form-Object">
-            <label>What is your name?</label>
-            <input 
-            className="input"
-            type="text"
-            name="name"
-            //required
-            autoComplete="off"
-            onChange={changeHandler}
-            />
             <label>What is your projected retirement account balance?<br/>(Enter a positive number)</label>
             <input
             className="input"
-            type="text"
+            type="number"
             name="retirement_account_balance"
-            //required
+            min="0"
+            required
             autoComplete="off"
             onChange={changeHandler}/>
             <label>What do you estimate your yearly expenses to be? <br/>(Enter a positive number)</label>
             <input
             className="input"
-            type="text"
+            type="number"
             name="yearly_expenses"
-            //required
+            min="0"
+            required
             autoComplete="off"
             onChange={changeHandler}
             />
             <label>How many years does this need to last? <br/>(Enter a whole number)</label>
             <input
             className="input"
-            type="text"
+            type="number"
             name="years"
-            //required
+            min="0"
+            required
             autoComplete="off"
             onChange={changeHandler}
             />
             <label>What percentage of your balance will be invested into stocks? <br/>(Enter a value 0-100)</label>
             <input
             className="input"
-            type="text"
+            type="number"
+            min="0"
+            max="100"
             name="stock_percentage"
-            //required
+            required
             autoComplete="off"
             onChange={changeHandler}
             />
             <button type="submit" className="submit-button">Submit</button>
         </form>
-        <UserInfo formData={formData}/>
     </div>
   )
 }
