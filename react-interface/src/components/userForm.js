@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, {useState} from 'react'
-import './formStyle.css'
+import '../styling/formStyle.css'
 
 const initialFormData = {
   retirement_account_balance: 0,
@@ -38,7 +38,7 @@ export default function UserForm() {
   return (
     <div className="form-container">
         <h2>Projected Retirement Account Statistics</h2>
-        <form onSubmit={submitHandler} className="form-Object">
+        <form onSubmit={submitHandler} className="form-object">
             <label>What is your projected retirement account balance?<br/>(Enter a positive number)</label>
             <input
             className="input"
