@@ -1,6 +1,7 @@
-import React, {useEffect}  from 'react'
+import React from 'react'
 import UserForm from './components/userForm'
 import UserResults from './components/userResults'
+import Description from './components/description'
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
     <div className="App">
       <UserForm />
       <UserResults />
+      <Description />
     </div>
   );
 }

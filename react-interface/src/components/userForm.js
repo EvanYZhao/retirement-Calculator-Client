@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import '../styling/formStyle.css'
 
 const initialFormData = {
@@ -35,6 +35,7 @@ export default function UserForm() {
     })
   }
 
+  //JSX for the conditional input form that grabs user data for processing in the backend
   return (
     <div className="form-container">
         <h2>Projected Retirement Account Statistics</h2>
@@ -58,12 +59,13 @@ export default function UserForm() {
             autoComplete="off"
             onChange={changeHandler}
             />
-            <label>How many years does this need to last? <br/>(Enter a whole number)</label>
+            <label>How many years does this need to last? <br/>(Enter a reasonable whole number (1 - 100))</label>
             <input
             className="input"
             type="number"
             name="years"
-            min="0"
+            min="1"
+            max="100"
             required
             autoComplete="off"
             onChange={changeHandler}
