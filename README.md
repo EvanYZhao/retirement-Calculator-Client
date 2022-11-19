@@ -1,37 +1,20 @@
 # Retirement Calculator!!!
- Let's check how on track you are for retirement!
+This retirement calculator predicts how likely you are to make it past retirement using the following four pieces of information:
+1. Predicted retirement account balance
+2. Yearly expenses
+3. How many years balance needs to last
+4. Percentage of balance invested into stocks
 
- # Front-end Goals
- - React :white_check_mark:
- - Create a user-friendly interface for collecting user inputs through form elements :white_check_mark:
- - Use those user inputs to output the data back to the consumer :white_check_mark:
- - Style the form to make input boxes aligned (flexbox) :white_check_mark:
- - Save user data submitted to the form and output it back to the user so they know what their results are based on. :white_check_mark:
+# How are my Results Calculated?
+Using 40 years worth of data from 1980-2021 from the following 3 sources:
+- <a href="https://www.thebalancemoney.com/stocks-and-bonds-calendar-year-performance-417028#toc-figures-from-1928-2021">S&P 500 Stock Index<a/>
+- <a href="https://www.thebalancemoney.com/stocks-and-bonds-calendar-year-performance-417028#toc-figures-from-1928-2021">Bloomberg Aggregate Bond Index<a/>
+- <a href="https://www.macrotrends.net/countries/USA/united-states/inflation-rate-cpi">United States Inflation Rates<a/>
+ 
+Your data is run through thousands of simulations which utilize the statistics above to generate a highly accurate prediction of your chances to 
+successfully make it past retirement based the 4 data points provided to the calculator.
 
- # Back-end Goals
- - Python (Flask) :white_check_mark:
- - Process User Data :white_check_mark:
- - Clear Output screen and cookies (session variables) with page refresh :white_check_mark:
-
- # Both
- - Connect Flask to React using proxy :white_check_mark:
- - Figure out how to start my Flask API and my React GUI simultaneously
- - Learn how to send POST requests and prove data consumption in the backend with app.logger.info() :white_check_mark:
- - Learn how to send dynamic POST requests (especially from user input into form data) :white_check_mark:
- - Learn how to send data that was posted in the backend back to the front end :white_check_mark:
-
- # ACQUIRED SKILLS/LEARNING OUTCOMES FROM PROJECT
- - Basics of Github
- - Linux commands in general/navigation using the terminal
- - What pip actually is and why it's so important
- - The importance of virtual environments in separating python dependencies and how to use/create them
- - Environment variables/teeny amounts of bash scripting (python-dotenv)
- - Organization of python virtual environments using virtualenvwrapper
- - React hooks and components
- - Python (Flask) server-side management/API creation
- - Connecting server and client through proxy in package.json (for React and Flask)
- - GET/POST requests and how to use them as a communication medium between server and client (axios)
- - Familiarity and acknowledgement of importance of JSON objects as the "web development" language
- - Full stack project management
- - Utilization of resources - the internet lol - to learn all the aforementioned bullet points for this project
-
+<b>Important Note:<b/> Whatever percentage is invested into stocks, the remaining percentage is assumed to be invested into bonds <br/>
+<p align="center">e.g. 25% invested into stocks -> 75% invested into bonds<p/>
+ 
+ <h2 align="center">Try it out!<h2/>
