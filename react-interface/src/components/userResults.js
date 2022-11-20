@@ -29,11 +29,11 @@ export default function UserResults() {
     if (loaded){
 
         //Readability Formatting using toLocaleString(locale='en-US')
-        let bond = isNaN(parseFloat(retirementResults.stock_percentage))? 0 : parseInt((1 - parseFloat(retirementResults.stock_percentage).toLocaleString('en-US'))*100)
         let balance = isNaN(parseInt(retirementResults.retirement_account_balance)) ? 0 : parseInt(retirementResults.retirement_account_balance).toLocaleString('en-US')
         let expenses = isNaN(parseInt(retirementResults.yearly_expenses)) ? 0 : parseInt(retirementResults.yearly_expenses).toLocaleString('en-US')
         let years = isNaN(parseInt(retirementResults.years)) ? 0 : parseInt(retirementResults.years).toLocaleString('en-US')
-        let stock = isNaN(parseFloat(retirementResults.stock_percentage))? 0 : parseFloat(retirementResults.stock_percentage).toLocaleString('en-US')
+        let stock = isNaN(parseFloat(retirementResults.stock_percentage))? 0 : parseInt((retirementResults.stock_percentage*100))
+        let bond = isNaN(parseFloat(retirementResults.stock_percentage))? 0 : 100-stock
         let final_average = isNaN(parseFloat(retirementResults.final_balance_average)) ? 0 : parseFloat(retirementResults.final_balance_average).toLocaleString('en-US')
         let final_stdev = isNaN(parseFloat(retirementResults.final_balance_stdev)) ? 0 : parseFloat(retirementResults.final_balance_stdev).toLocaleString('en-US')
     
@@ -44,7 +44,7 @@ export default function UserResults() {
                     <p>With a predicted balance of ${balance}</p>
                     <p>Annual spending of ${expenses}</p>
                     <p>A timeline of {years} years</p>
-                    <p>{stock * 100}% invested into stocks</p>
+                    <p>{stock}% invested into stocks</p>
                     <p>{bond}% invested into bonds</p>
                 </div>
                 <div className="user-results">
