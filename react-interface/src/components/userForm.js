@@ -20,7 +20,8 @@ export default function UserForm() {
     }
 
     //Sending post request of user input to backend
-    axios.post("rcsenv.eba-kgjqtuun.us-west-2.elasticbeanstalk.com/retrieve", object)
+    //DEPLOYMENT ERROR: GITHUB PAGES URL PREPENDED TO THE FOLLOWING URL WHEN SUBMIT BUTTON IS HIT FOR SOME REASON???
+    axios.post("http://rcsenv.eba-kgjqtuun.us-west-2.elasticbeanstalk.com/retrieve", object)
     .then((response) => {
       updateLoaded(true) //Set true if post request returns valid data
       updateRetirementResults(response.data)
