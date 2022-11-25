@@ -20,7 +20,7 @@ export default function UserForm() {
     }
 
     //Sending post request of user input to backend
-    axios.post("retrieve", object)
+    axios.post("rcsenv.eba-kgjqtuun.us-west-2.elasticbeanstalk.com/retrieve", object)
     .then((response) => {
       updateLoaded(true) //Set true if post request returns valid data
       updateRetirementResults(response.data)
