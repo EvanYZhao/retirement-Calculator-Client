@@ -1,6 +1,7 @@
 {
   "name": "react-interface",
   "version": "0.1.0",
+  "proxy": "http://rcsenv.eba-kgjqtuun.us-west-2.elasticbeanstalk.com/",
   "homepage": "https://EvanYZhao.github.io/retirement-Calculator-Client",
   "private": true,
   "dependencies": {
