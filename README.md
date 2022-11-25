@@ -16,3 +16,6 @@ successfully make it past retirement based the 4 data points provided to the cal
 
 <b>Important Note:<b/> Whatever percentage is invested into stocks, the remaining percentage is assumed to be invested into bonds <br/>
 <p align="center">e.g. 25% invested into stocks -> 75% invested into bonds<p/>
+
+# Final Result
+- Click here to see the final result: <a href="https://evanyzhao.github.io/retirement-Calculator-Client/">Retirement Calculator Website!<a/>
