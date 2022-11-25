@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.52f9979f.css",
-    "main.js": "/static/js/main.966c5372.js",
-    "index.html": "/index.html",
-    "main.52f9979f.css.map": "/static/css/main.52f9979f.css.map",
-    "main.966c5372.js.map": "/static/js/main.966c5372.js.map"
+    "main.css": "/retirement-Calculator-Client/static/css/main.52f9979f.css",
+    "main.js": "/retirement-Calculator-Client/static/js/main.135cef35.js",
+    "index.html": "/retirement-Calculator-Client/index.html",
+    "main.52f9979f.css.map": "/retirement-Calculator-Client/static/css/main.52f9979f.css.map",
+    "main.135cef35.js.map": "/retirement-Calculator-Client/static/js/main.135cef35.js.map"
   },
   "entrypoints": [
     "static/css/main.52f9979f.css",
-    "static/js/main.966c5372.js"
+    "static/js/main.135cef35.js"
   ]
 }
