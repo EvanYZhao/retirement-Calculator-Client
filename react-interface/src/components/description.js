@@ -15,10 +15,10 @@ export default function Description() {
         <h3>Problem 1: My inputs have 0 for all my results?</h3>
         <p>The calculator is only designed to take reasonable inputs - i.e. yearly expenses do not exceed predicted balance. <br/>
             in the case of unreasonable inputs, the calculator will display 0 for all results.</p>
-        <h3>Problem 2: My screen is stuck in the loading animation?</h3>
+        <h3>Problem 2: My inputs couldn't be processed correctly?</h3>
         <p>This is most likely due to an input combination where years*expenses (years times expenses) is considerably greater than <br/>
-            what your projected balance is. It is safe to assume that there is close to a 0 percent chance <br/>
-            success rate in this case. To fix the indefinite loading screen, simply refresh the page.</p>
+            what your projected balance is. It is safe to assume that there is close to a 0 percent chance success rate in this case.<br/>
+            To fix the indefinite loading screen, simply refresh the page or submit new <b>reasonable</b> values into the form.</p>
     </div>
   )
 }

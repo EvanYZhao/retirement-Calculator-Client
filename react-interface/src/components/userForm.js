@@ -1,38 +1,35 @@
 import axios from 'axios'
 import React, {useState} from 'react'
+import UserResults from './userResults'
 import '../styling/formStyle.css'
 
-const initialFormData = {
-  retirement_account_balance: 0,
-  yearly_expenses: 0,
-  years: 0,
-  stock_percentage: 0
-}
-
 export default function UserForm() {
-  const [formData, updateFormData] = useState(initialFormData)
+  const [loaded, updateLoaded] = useState(false)
+  const [retirementResults, updateRetirementResults] = useState(null)
+  
+  //Whenever submit button is hit, this function is called
+  function submitHandler(e){
+    //Prevents refresh
+    e.preventDefault()
+    //Hard-coding of JSON object of user inputs
+    let object = {
+      "retirement_account_balance": e.target[0].value,
+      "yearly_expenses": e.target[1].value,
+      "years": e.target[2].value,
+      "stock_percentage": e.target[3].value
+    }
 
-  //Updates formData state every time the input changes 
-  //(e.target.name shows name of form element being accessed. [] stringifies the form name)
-  //(e.target.value shows the current value being manipulated in any one of the text boxes)
-  const changeHandler = (e) => {
-    updateFormData(
-      {
-        ...formData,
-
-        [e.target.name]: e.target.value.trim()
-      })
-  }
-
-  //POSTs the final variables to the API after hitting submit button
-  const submitHandler = () => {
-    axios.post("/retrieve", formData)
+    //Sending post request of user input to backend
+    axios.post("http://127.0.0.1:5000/retrieve", object)
     .then((response) => {
-      console.log(response)
+      updateLoaded(true) //Set true if post request returns valid data
+      updateRetirementResults(response.data)
     })
     .catch((error) => {
-      console.log(error)
+      updateLoaded(false) //Set false if post request returns invalid data (indefinite loading screen problem)
     })
+
+    e.target.reset()
   }
 
   //JSX for the conditional input form that grabs user data for processing in the backend
@@ -48,7 +45,7 @@ export default function UserForm() {
             min="0"
             required
             autoComplete="off"
-            onChange={changeHandler}/>
+            />
             <label>What do you estimate your yearly expenses to be? <br/>(Enter a positive number)</label>
             <input
             className="input"
@@ -57,7 +54,6 @@ export default function UserForm() {
             min="0"
             required
             autoComplete="off"
-            onChange={changeHandler}
             />
             <label>How many years does this need to last? <br/>(Enter a reasonable whole number (1 - 100))</label>
             <input
@@ -68,7 +64,6 @@ export default function UserForm() {
             max="100"
             required
             autoComplete="off"
-            onChange={changeHandler}
             />
             <label>What percentage of your balance will be invested into stocks? <br/>(Enter a value 0-100)</label>
             <input
@@ -79,10 +74,10 @@ export default function UserForm() {
             name="stock_percentage"
             required
             autoComplete="off"
-            onChange={changeHandler}
             />
             <button type="submit" className="submit-button">Submit</button>
         </form>
+        <UserResults loaded={loaded} retirementResults={retirementResults}/>
     </div>
   )
 }
