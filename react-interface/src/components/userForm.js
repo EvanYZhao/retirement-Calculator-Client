@@ -20,7 +20,7 @@ export default function UserForm() {
     }
 
     //Sending post request of user input to backend
-    axios.post("http://127.0.0.1:5000/retrieve", object)
+    axios.post("http://retirement-calculator-server-env.eba-apurpdgp.us-west-2.elasticbeanstalk.com/retrieve", object)
     .then((response) => {
       updateLoaded(true) //Set true if post request returns valid data
       updateRetirementResults(response.data)
