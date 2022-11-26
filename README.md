@@ -2,7 +2,12 @@
 ## Important!
 - This calculator currently only works by changing your site settings to "Allow" for Insecure Content.
 - This calculator is currently not supported on mobile devices, sorry for the inconvenience :(
-### Tutorial
+### Tutorial on How to Allow Insecure Content
+
+
+https://user-images.githubusercontent.com/96805283/204067262-29d036dd-af8c-4bca-bc1c-cc63c3c3b4d1.mp4
+
+
 
 ## Overview
 This retirement calculator predicts how likely you are to make it past retirement using the following four pieces of information:
