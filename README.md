@@ -1,7 +1,7 @@
 # Retirement Calculator!!!
-## Important
-This calculator currently only works by changing your site settings to "Allow" for Insecure Content <br/>
-A patch will be available sometime in the near future for this bug
+## Important!
+- This calculator currently only works by changing your site settings to "Allow" for Insecure Content <br/>
+- A patch will be available sometime in the near future for this bug
 
 ## Overview
 This retirement calculator predicts how likely you are to make it past retirement using the following four pieces of information:
