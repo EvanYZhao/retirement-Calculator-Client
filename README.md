@@ -1,4 +1,4 @@
-# Retirement Calculator!!!
+#  <a href="https://evanyzhao.github.io/retirement-Calculator-Client/">Retirement Calculator!!!</a>
 ## Important!
 - This calculator currently only works by changing your site settings to "Allow" for Insecure Content.
 - This calculator is currently not supported on mobile devices, sorry for the inconvenience :(
@@ -38,6 +38,3 @@ successfully make it past retirement based on the 4 data points provided to the 
   
 ## Backend Code
 - <a href="https://github.com/EvanYZhao/retirement-Calculator-Server">Click here to redirect to my backend code!</a>
-
-## Final Result
-- Click here to see the final result: <a href="https://evanyzhao.github.io/retirement-Calculator-Client/">Retirement Calculator Website!</a>
