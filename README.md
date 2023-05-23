@@ -36,5 +36,5 @@ successfully make it past retirement based on the 4 data points provided to the 
 - Backend: Flask
   - Python
   
-## Backend Code
-- <a href="https://github.com/EvanYZhao/retirement-Calculator-Server">Click here to redirect to my backend code!</a>
+## API
+- <a href="https://github.com/EvanYZhao/retirement-Calculator-Server">Click here to redirect to my middleware!</a>
