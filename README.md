@@ -33,7 +33,7 @@ successfully make it past retirement based on the 4 data points provided to the 
   - HTML
   - CSS
   - Javascript (JSX)
-- Backend: Flask
+- Middleware: Flask
   - Python
   
 ## API
